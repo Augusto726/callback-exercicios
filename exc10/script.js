@@ -1,5 +1,10 @@
-function confirmarAcao() {
-    document.getElementById("mensagem").textContent = "Ação confirmada!";
+function gerarMensagem() {
+    return "Ação confirmada!";
 }
 
-document.getElementById("btnConfirmar").addEventListener("click", confirmarAcao);
+function confirmarAcao(callback) {
+    const texto = callback();
+    console.log(texto);
+}
+
+confirmarAcao(gerarMensagem);
